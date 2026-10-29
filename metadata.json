@@ -1,0 +1,24 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "",
+                "Name": "Farmer Jay"
+            }
+        ],
+        "Description": "A Windows 11-style application launcher for KDE Plasma 6. Windows 11's face, your rules underneath: uniform icon sizes, category view for all apps, user category overrides, and no Recommended section unless you ask for it.",
+        "Icon": "start-here-kde",
+        "Id": "dev.farmerjay.fenestrae11",
+        "License": "GPL-2.0+",
+        "Name": "Fenestrae 11",
+        "Version": "1.0.0",
+        "Website": "",
+        "Category": "Application Launchers"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "X-Plasma-Provides": [
+        "org.kde.plasma.launchermenu"
+    ]
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name=""/>
+  <group name="General">
+    <!-- John's ruling: Recommended exists only as an option, default OFF. -->
+    <entry name="showRecommended" type="Bool">
+      <default>false</default>
+    </entry>
+    <!-- Pinned grid shape: locked layout A = 8 columns x 3 rows. -->
+    <entry name="pinnedColumns" type="Int">
+      <default>8</default>
+    </entry>
+    <entry name="pinnedRows" type="Int">
+      <default>3</default>
+    </entry>
+    <!-- THE icon law: one size for every pinned icon, one for every collage icon. -->
+    <entry name="pinnedIconSize" type="Int">
+      <default>48</default>
+    </entry>
+    <entry name="collageIconSize" type="Int">
+      <default>36</default>
+    </entry>
+    <!-- Category overrides, JSON object: { "desktop-file-id": "Category Name", ... }
+         An override here WINS over whatever categories the app's .desktop file claims.
+         Example: { "org.kde.kate": "Developer Tools" } -->
+    <entry name="categoryOverrides" type="String">
+      <default>{}</default>
+    </entry>
+    <!-- The All section's view choice (v1.0.0): "category" or
+         "list". The menu remembers how the user left it instead of
+         resetting to Category on every shell restart. Written by
+         the widget when the View menu changes it. -->
+    <entry name="viewMode" type="String">
+      <default>category</default>
+    </entry>
+    <!-- Fenestrae's OWN pin list (desktop-file IDs). Plasma favorites
+         are per-launcher, so Fenestrae keeps its own pins, managed by
+         right-clicking any app tile: Pin / Unpin from Start. -->
+    <entry name="pinnedApps" type="StringList">
+      <default>org.mozilla.firefox.desktop,org.kde.dolphin.desktop,org.kde.konsole.desktop,systemsettings.desktop</default>
+    </entry>
+  </group>
+</kcfg>
